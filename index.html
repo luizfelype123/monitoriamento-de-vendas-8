@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Vendas</h1>
+
+        <!-- Formulário de Registro de Venda -->
+        <form id="form-venda">
+            <input type="text" id="produto" placeholder="Nome do Produto" required>
+            <input type="number" id="preco" placeholder="Preço Unitário" required>
+            <input type="number" id="quantidade" placeholder="Quantidade Vendida" required>
+            <button type="submit">Registrar Venda</button>
+        </form>
+
+        <!-- Tabela de Vendas -->
+        <table id="tabela-vendas">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço Unitário</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Resumo -->
+        <div class="resumo">
+            <p>Faturamento Mensal: <span id="faturamento">R$ 0,00</span></p>
+            <p>Desempenho: <span id="desempenho">Na média</span></p>
+        </div>
+
+        <!-- Gráfico de Vendas -->
+        <div id="grafico-vendas">
+            <canvas id="grafico"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
